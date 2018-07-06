@@ -7,10 +7,10 @@ import service.ExamServiceImpl;
 import service.MemberServiceImpl;
 
 
-public class GMSController {
-	private static GMSController instance = new GMSController();
-	public static GMSController getIntance() {return instance;}
-	private GMSController() {}
+public class SubjectController {
+	private static SubjectController instance = new SubjectController();
+	public static SubjectController getIntance() {return instance;}
+	private SubjectController() {}
 	
 	public static void main(String[] args) {
 		while (true) {

@@ -4,51 +4,45 @@ import java.util.List;
 
 import domain.SubjectBean;
 
-public class SubjectImplDAO implements SubjectDAO {
-	private static SubjectImplDAO instance = new SubjectImplDAO();
-	public static SubjectImplDAO getInstance() {return instance;}
-	private SubjectImplDAO() {}
-
+public class SubjectlDAOImpl implements SubjectDAO {
+	private static SubjectDAO instance = new SubjectlDAOImpl();
+	public static SubjectDAO getInstance() {return instance;}
+	private SubjectlDAOImpl() {}
 	@Override
-	public void createSubject(SubjectBean subject) {
+	public void insertSubject(SubjectBean subject) {
 		// TODO Auto-generated method stub
 		
 	}
-
 	@Override
-	public List<SubjectBean> subjectList() {
+	public List<SubjectBean> selectSubjectList() {
 		// TODO Auto-generated method stub
 		return null;
 	}
-
 	@Override
-	public List<SubjectBean> findSubjectByName(String name) {
+	public List<SubjectBean> selectSubjectByName(String name) {
 		// TODO Auto-generated method stub
 		return null;
 	}
-
 	@Override
-	public SubjectBean findSubjectById(SubjectBean subject) {
+	public SubjectBean selectSubjectById(SubjectBean subject) {
 		// TODO Auto-generated method stub
 		return null;
 	}
-
 	@Override
 	public int countSubject() {
 		// TODO Auto-generated method stub
 		return 0;
 	}
-
 	@Override
 	public void updateSubjectInformation(SubjectBean subject) {
 		// TODO Auto-generated method stub
 		
 	}
-
 	@Override
 	public void deleteSubjectInformation(SubjectBean subject) {
 		// TODO Auto-generated method stub
 		
 	}
+
 
 }

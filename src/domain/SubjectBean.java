@@ -18,5 +18,10 @@ public class SubjectBean {
 	public void setSubName(String subName) {
 		this.subName = subName;
 	}
+
+	@Override
+	public String toString() {
+		return "SubjectBean [subSeq=" + subSeq + ", subName=" + subName + ", toString()=" + super.toString() + "]";
+	}
 	
 }

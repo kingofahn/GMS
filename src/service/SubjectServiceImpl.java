@@ -5,8 +5,8 @@ import java.util.List;
 import domain.SubjectBean;
 
 public class SubjectServiceImpl implements SubjectService {
-	private static SubjectServiceImpl instance = new SubjectServiceImpl();
-	public static SubjectServiceImpl getInstance() {return instance;}
+	private static SubjectService instance = new SubjectServiceImpl();
+	public static SubjectService getInstance() {return instance;}
 	private SubjectServiceImpl() {}
 
 	@Override

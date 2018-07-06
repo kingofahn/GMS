@@ -8,15 +8,15 @@ import domain.MemberBean;
 
 public class MemberServiceImpl implements MemberService {
 
-	private static MemberServiceImpl instance = new MemberServiceImpl();
-	public static MemberServiceImpl getInstance() {return instance;}
+	private static MemberService instance = new MemberServiceImpl();
+	public static MemberService getInstance() {return instance;}
 	private MemberServiceImpl() {}
 	List<MemberBean> memberList;
 	
 	
 	@Override
 	public void createMember(MemberBean member) {
-		MemberDAOImpl.getInstance().createMember(member);
+		MemberDAOImpl.getInstance().insertMember(member);
 		System.out.println("MemberService OK");
 	}
 

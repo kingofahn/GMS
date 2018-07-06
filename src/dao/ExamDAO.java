@@ -1,15 +1,12 @@
 package dao;
-
 import java.util.List;
-
 import domain.*;
-
 public interface ExamDAO {
-	public void createExam(ExamBean exam);
-	public List<ExamBean> examlist();
-	public List<ExamBean> findExamById(String name);
+	public void insertExam(ExamBean exam);
+	public List<ExamBean> selectAllList();
+	public List<ExamBean> selectExamById(String name);
+	public ExamBean selectExamById(ExamBean exam);
 	public int examCount();
-	public ExamBean findExamById(ExamBean exam);
 	public void updateExamInformation(ExamBean exam);
 	public void deleteExamInformation(ExamBean exam);
 }

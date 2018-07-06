@@ -6,8 +6,8 @@ import domain.RecordBean;
 
 public class RecordServiceImpl implements RecordService{
 
-	private static RecordServiceImpl instance = new RecordServiceImpl();
-	public static RecordServiceImpl getInstance() {return instance;}
+	private static RecordService instance = new RecordServiceImpl();
+	public static RecordService getInstance() {return instance;}
 	private RecordServiceImpl() {}
 	
 	@Override

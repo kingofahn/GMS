@@ -17,6 +17,12 @@ public class ProjectTeamBean {
 
 	public void setTeamName(String teamName) {
 		this.teamName = teamName;
+	}
+
+	@Override
+	public String toString() {
+		return "ProjectTeamBean [teamId=" + teamId + ", teamName=" + teamName + ", toString()=" + super.toString()
+				+ "]";
 	} 
 	
 }

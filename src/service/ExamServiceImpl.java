@@ -5,22 +5,41 @@ import java.util.List;
 
 import dao.ExamDAOImpl;
 import dao.MemberDAOImpl;
+import dao.RecordDAOImpl;
+import dao.SubjectlDAOImpl;
 import domain.ExamBean;
 import domain.MemberBean;
+import domain.RecordBean;
+import domain.SubjectBean;
 
 public class ExamServiceImpl implements ExamService {
-	private static ExamServiceImpl instance = new ExamServiceImpl();
-	public static ExamServiceImpl getInstance() {return instance;}
+	private static ExamService instance = new ExamServiceImpl();
+	public static ExamService getInstance() {return instance;}
 	private ExamServiceImpl() {}
 	List<ExamBean> examList;
 	
 	
 	@Override
 	public void createExam(ExamBean exam) {
-		ExamDAOImpl.getInstance().createExam(exam);
-		System.out.println(exam.getMemId());
-		System.out.println("ExamServiceImpl OK!!");
-
+		System.out.println("===== ExamService =====");
+        System.out.println(exam);
+        // 과목SEQ=null,
+        // 성적표SEQ=null
+        System.out.println("----- RECORD TABLE INSERT ------");
+        RecordBean rec = new RecordBean();
+        rec.setAvg("80");
+        rec.setGrade("");
+        RecordDAOImpl.getInstance().insertRecord(rec);
+        System.out.println("------ Exam TABLE INSERT ------");
+        exam.setScore(exam.getScore().split("/")[0]);
+        exam.setSubSeq(
+                SubjectlDAOImpl.getInstance().
+                selectSubjectByName("JAVA").get(0)
+                .getSubSeq())
+                ;
+        exam.setRecordSeq(RecordDAOImpl.getInstance()
+                .selectFirstRownum());    
+        ExamDAOImpl.getInstance().insertExam(exam);
 	}
 
 	@Override
@@ -64,6 +83,10 @@ public class ExamServiceImpl implements ExamService {
 	public int examCount() {
 		// TODO Auto-generated method stub
 		return 0;
+	}
+	@Override
+	public String toString() {
+		return "ExamServiceImpl [examList=" + examList + ", toString()=" + super.toString() + "]";
 	}
 
 }

@@ -5,8 +5,8 @@ import java.util.List;
 import domain.ProjectTeamBean;
 
 public class ProjectTeamServiceImpl implements ProjectTeamService {
-	private static ProjectTeamServiceImpl instance = new ProjectTeamServiceImpl();
-	public static ProjectTeamServiceImpl getInstance() {return instance;}
+	private static ProjectTeamService instance = new ProjectTeamServiceImpl();
+	public static ProjectTeamService getInstance() {return instance;}
 	private ProjectTeamServiceImpl() {}
 	
 	@Override

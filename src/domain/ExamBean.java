@@ -50,4 +50,11 @@ public class ExamBean {
 	public void setRecordSeq(String recordSeq) {
 		this.recordSeq = recordSeq;
 	}
+
+	@Override
+	public String toString() {
+		return "ExamBean [examSeq=" + examSeq + ", memId=" + memId + ", score=" + score + ", month=" + month
+				+ ", subSeq=" + subSeq + ", recordSeq=" + recordSeq + ", toString()=" + super.toString() + "]";
+	}
+	
 }

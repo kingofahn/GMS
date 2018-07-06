@@ -26,5 +26,11 @@ public class RecordBean {
 	public void setAvg(String avg) {
 		this.avg = avg;
 	}
+
+	@Override
+	public String toString() {
+		return "RecordBean [recordSeq=" + recordSeq + ", grade=" + grade + ", avg=" + avg + ", toString()="
+				+ super.toString() + "]";
+	}
 	
 }
